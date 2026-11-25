@@ -1,0 +1,73 @@
+# Épreuve finale 420-314 — Mini-serre intelligente
+
+## 1. Description du problème et de la fonction du prototype
+
+Le projet consiste à concevoir une mini-serre intelligente à l'aide d'une carte Arduino Nano ESP32 programmée en MicroPython.
+
+Le problème choisi est le manque de surveillance des conditions environnementales nécessaires à la croissance d'une plante.
+
+Le prototype utilisera des capteurs pour mesurer les conditions de son environnement. Selon les valeurs mesurées, le système pourra ajuster automatiquement son éclairage et signaler les situations anormales.
+
+L'objectif est de créer un système autonome, interactif et capable de réagir intelligemment aux changements de son environnement.
+
+## 2. Diagramme fonctionnel
+
+Le système suivra les étapes suivantes :
+
+1. Démarrer la carte ESP32.
+2. Lire les données des capteurs.
+3. Vérifier si les valeurs sont valides.
+4. Interpréter les mesures.
+5. Déterminer le mode de fonctionnement.
+6. Commander les sorties.
+7. Afficher l'état du système.
+8. Recommencer les lectures automatiquement.
+
+## 3. Liste préliminaire des composants
+
+| Composant | Utilité |
+|---|---|
+| Arduino Nano ESP32 | Contrôle du système |
+| Capteur de luminosité analogique | Mesurer la lumière ambiante |
+| Capteur DHT11 | Mesurer la température et l'humidité de l'air |
+| Module DEL | Éclairage contrôlé par PWM |
+| Deuxième DEL | Indiquer l'état du système |
+| Bouton poussoir | Changer de mode |
+| Matrice DEL 8×8 HT16K33 | Afficher les informations |
+
+
+## 4. Attribution préliminaire des broches
+
+| Composant | Broche |
+|---|---|
+| Capteur de luminosité | A2 |
+| Capteur DHT22 | D2 |
+| DEL avec PWM | A1 |
+| DEL d'état | G4 |
+| Bouton | D3 |
+| Matrice HT16K33 SDA | A4 |
+| Matrice HT16K33 SCL | A5 |
+
+Les branchements définitifs seront vérifiés lors du montage.
+
+## 5. Répartition du travail
+
+**Membre 1 :**
+- Programmation des capteurs.
+- Lecture et interprétation des données.
+- Calibration des valeurs.
+- Détection des erreurs.
+
+**Membre 2 :**
+- Programmation des sorties.
+- Gestion des modes.
+- Affichage des informations.
+- Préparation du montage.
+
+**Travail collectif :**
+- Intégration du système.
+- Tests et corrections.
+- Documentation.
+- Démonstration finale.
+
+## 6. Dépôt GitHub
